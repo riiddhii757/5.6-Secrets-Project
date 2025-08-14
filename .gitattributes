@@ -1,16 +1,19 @@
 # Set default behavior to automatically normalize line endings
 * text=auto
 
-# Explicitly declare text files you want to always normalize
-*.js text
-*.json text
-*.css text
-*.html text
-*.ejs text
-
-# Binary files — do not modify line endings
+# Treat certain file types as binary so Git doesn't change them
 *.png binary
 *.jpg binary
+*.jpeg binary
 *.gif binary
 *.ico binary
 *.pdf binary
+*.zip binary
+*.exe binary
+
+# Force CRLF on Windows for scripts (optional)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Force LF for scripts used on Linux/Mac (optional)
+*.sh text eol=lf
